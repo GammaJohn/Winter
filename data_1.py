@@ -1,8 +1,10 @@
+import math
+
 def checkPrime(num):
-    for i in range(2, int(num/2) + 1):
+    for i in range(2, int(math.pow(num, 0.5)) + 1):
         if num % i == 0:
             return False
-
+        
     return True
 
 def findPrime(n):
@@ -16,4 +18,4 @@ def findPrime(n):
     return current
 
 nth = 10001
-print("the", nth, "prime number is", findPrime(nth))
+print("the %dth number is %d" % (nth, findPrime(nth)))
